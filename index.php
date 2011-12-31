@@ -15,3 +15,4 @@ foreach ($jobs as $j)
 	$selectedjobs[] = array('job' => $j[rand(0,count($j)-1)]);
 
 $dwoo->output('ffvjobs.tpl', array('jobs' => $selectedjobs));
+?>
