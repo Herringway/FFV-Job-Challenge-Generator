@@ -8,7 +8,7 @@ $jobs[] = array('Ninja', 'Geomancer', 'Bard', 'Ranger', 'Trainer');
 $jobs[] = array('Samurai', 'Dragoon', 'Chemist', 'Dancer');
 $characters = array('butz', 'lenna', 'faris', 'krile');
 if (!isset($_GET['trand']))
-	srand(ip2long($_SERVER['REMOTE_ADDR']));
+	srand(ip2long($_SERVER['REMOTE_ADDR']) + isset($_GET['superhard']));
 	
 if (isset($_GET['hard'])) {
 	for($i = 1; $i < 4; $i++)
@@ -23,7 +23,6 @@ if (isset($_GET['hard'])) {
 	if (isset($_GET['advancemode']))
 		$jobs[] = array('Oracle', 'Cannoneer', 'Gladiator');
 
-		
 	$selectedjobs = array();
 	foreach ($jobs as $j)
 		$selectedjobs[] = array('character' => 'butz', 'job' => $j[rand(0,count($j)-1)]);
