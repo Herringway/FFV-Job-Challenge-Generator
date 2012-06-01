@@ -5,6 +5,6 @@
 		<link rel="shortcut icon" href="ffvsprites/knight.PNG" />
 	</head>
 	<body style="background: lightgray;">
-		<table><tr>{loop $jobs}<td style="text-align: center; width: 100px; background: white;"><img alt="{$job}" src="ffvsprites/{replace($job, ' ', '%20')|lower}.PNG"><br>{$job}</td>{/loop}</tr></table>
+		<table><tr>{loop $jobs}<td style="text-align: center; width: 100px; background: white;"><img alt="{$job}" src="ffvsprites/{$character}/{replace($job, ' ', '%20')|lower}.PNG"><br>{$job}</td>{/loop}</tr></table>
 	</body>
 </html>
