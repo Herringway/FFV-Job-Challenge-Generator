@@ -1,5 +1,5 @@
 <?php
-require_once 'Twig/Autoloader.php';
+require_once 'vendor/autoload.php';
 if (!isset($_GET['trand']))
 	srand(ip2long($_SERVER['REMOTE_ADDR']) + isset($_GET['random']) + isset($_GET['advanced']) + isset($_GET['natural']));
 $jobs = [];
